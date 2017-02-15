@@ -9,11 +9,10 @@
   "homepage": "https://github.com/joaomosantos/gridsizer",
   "version": "1.0.0",
   "ignore": [
-    "**/.*",
     "node_modules",
-    "bower_components"
-  ],
-  "dependencies": {
-    "normalize-css": "^5.0.0"
-  }
+    "bower_components",
+    ".bowerrc",
+    "gulpfile.js",
+    "package.json"
+  ]
 }
