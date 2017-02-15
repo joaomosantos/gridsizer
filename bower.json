@@ -1,0 +1,19 @@
+{
+  "name": "gridsizer",
+  "description": "Create powerful multi-device layouts quickly and easily with the default 12-column",
+  "main": "src/gridsizer.css",
+  "authors": [
+    "Max Oliveira <joaomosantos@outlook.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/joaomosantos/gridsizer",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "normalize-css": "^5.0.0"
+  }
+}

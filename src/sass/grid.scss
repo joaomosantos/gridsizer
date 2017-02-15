@@ -1,0 +1,72 @@
+$gridsNumber: 12;
+$containerWidth: 1200px;
+
+.container {
+	max-width: $containerWidth;
+	margin: auto;
+	overflow: hidden;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.row {
+	width: 100%;
+	margin-bottom: 1em;
+	&:after {
+		content: "";
+    clear: both;
+    display: table;
+	}
+}
+
+[class*=gs-] {
+	float: left;
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+@each $gridsType in t, s, m, l {
+	@for $i from 1 through $gridsNumber {
+		.gs-#{$gridsType}#{$i} { 
+			@if $gridsType == l {
+				@media (min-width: 1200px) {
+					width: (100% / $gridsNumber) * $i;
+				}
+			} @else if $gridsType == m {
+				@media (min-width: 980px) {
+					width: (100% / $gridsNumber) * $i;
+				}
+			} @else if $gridsType == s {
+				@media (min-width: 768px) {
+					width: (100% / $gridsNumber) * $i;
+				} 
+			} @else if $gridsType == t {
+				@media (min-width: 640px) {
+					width: (100% / $gridsNumber) * $i;
+				} 
+			} 
+		}
+
+		.gs-offset-#{$gridsType}#{$i} {
+			@if $gridsType == l {
+				@media (min-width: 1200px) {
+					margin-left: (100% / $gridsNumber) * $i;
+				}
+			} @else if $gridsType == m {
+				@media (min-width: 980px) and (max-width: 1199px) {
+					margin-left: (100% / $gridsNumber) * $i;
+				}
+			} @else if $gridsType == s {
+				@media (min-width: 768px) and (max-width: 979px) {
+					margin-left: (100% / $gridsNumber) * $i;
+				}
+			} @else if $gridsType == t {
+				@media (min-width: 640px) and (max-width: 767px) {
+					margin-left: (100% / $gridsNumber) * $i;
+				}
+			}
+		}
+	}
+}
