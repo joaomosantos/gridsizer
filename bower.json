@@ -6,13 +6,16 @@
     "Max Oliveira <joaomosantos@outlook.com>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/joaomosantos/gridsizer",
-  "version": "1.0.0",
+  "homepage": "https://joaomosantos.github.io/gridsizer/",
   "ignore": [
     "node_modules",
     "bower_components",
     ".bowerrc",
     "gulpfile.js",
     "package.json"
-  ]
+  ],
+  "devDependencies": {
+    "normalize-css": "^5.0.0",
+    "highlight": "^9.9.0"
+  }
 }

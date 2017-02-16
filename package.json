@@ -1,6 +1,5 @@
 {
   "name": "gridsizer",
-  "version": "1.0.0",
   "description": "Create powerful multi-device layouts quickly and easily with the default 12-column",
   "main": "src/gridsizer.css",
   "scripts": {
